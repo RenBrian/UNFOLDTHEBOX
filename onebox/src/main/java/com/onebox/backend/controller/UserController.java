@@ -33,6 +33,7 @@ public class UserController {
 		}
 		//初始积分为0
 		User user = new User(user_ID, user_name, real_name, 0, user_image);
+		System.out.println(user);
 		return userService.saveUser(user);
 	}
 	
@@ -42,17 +43,17 @@ public class UserController {
 	public String findByOpenID(@RequestBody Map<String, Object> reqMap) {
 		String openid = reqMap.get("openid").toString();
 		User user = userService.findByOpenID(openid);
+		System.out.println(user);
 		JSONObject json = JSONObject.fromObject(user);
 		return json.toString();
 	}
 	
 	//登录加积分
-//	@RequestMapping("/scoreIncrement")
-//	public String scoreIncrement(@RequestBody Map<String, Object> reqMap) {
-//		String openid = reqMap.get("openid").toString();
-//		
-//		return 
-//	}
+	@RequestMapping("/scoreIncrement")
+	public String scoreIncrement(@RequestBody Map<String, Object> reqMap) {
+		String openid = reqMap.get("openid").toString();
+		return userService.increUserScore(openid);
+	}
 	
 
 }

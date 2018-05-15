@@ -18,6 +18,11 @@ public class PageController {
 		return "index";
 	}
 	
+	@RequestMapping("/api")
+	public String api() {
+		return "api";
+	}
+	
 	@RequestMapping("/userinfo")
 	public String userinfo() {
 		return "userinfo";
@@ -31,6 +36,11 @@ public class PageController {
 	@RequestMapping("/record")
 	public String record() {
 		return "record";
+	}
+	
+	@RequestMapping("/uploading")
+	public String upload() {
+		return "uploading";
 	}
 
 }

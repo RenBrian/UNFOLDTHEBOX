@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>API</title>
+</head>
+<body>
+	<h3>OneBox接口</h3>
+	<p>上传文件</p>
+	<p>url:/onebox/uploading</p>
+	<p>request:@RequestParam("file") MultipartFile multipartFile</p>
+	<p>response:{"result":"success/error"[,"filepath":""]}</p>
+	<h4>用户中心</h4>
+	<p>首次登陆存储用户信息</p>
+	<p>url:/onebox/user/saveUser</p>
+	<p>request:{"username":"","openid":"","realname":"","userimage":""}</p>
+	<p>response:{"result": "success/error"}</p>
+	<p>按ID查找</p>
+	<p>url:/onebox/user/findByID</p>
+	<p>request:{"openid":""}</p>
+	<p>response:{"user_ID":"","user_image":"","user_score":0,"user_name":"","real_name":""}</p>
+	<p>登陆积分+1</p>
+	<p>url:/onebox/user/scoreIncrement</p>
+	<p>request:{"openid":""}</p>
+	<p>response:{"result": "success/error"}</p>
+</body>
+</html>

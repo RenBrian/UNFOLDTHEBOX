@@ -9,5 +9,7 @@ public interface UserService {
 	public User findByOpenID(String openid);
 	
 	public Integer getUserScore(String openid);
+	
+	public String increUserScore(String openid);
 
 }
