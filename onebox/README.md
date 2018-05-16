@@ -1,3 +1,15 @@
+up - down
+
+2018-05-16
+支持http/https
+	https://www.jianshu.com/p/c3879add87ec
+	https://www.jianshu.com/p/b6549f086b21
+	https://yq.aliyun.com/articles/54056
+ssl
+	keytool -genkey -alias onebox -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+	token: onebox
+	CN=Ren, OU=CUHK, O=CUHK, L=HK, ST=HK, C=CN
+
 2018-05-16
 用户中心接口测试OK
 server.port=8080
