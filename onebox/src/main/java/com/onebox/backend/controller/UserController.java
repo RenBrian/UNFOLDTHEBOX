@@ -20,21 +20,24 @@ public class UserController {
 	
 	//首次登录存储用户信息
 	//用户尾一标识openid
-	//还需要字段:大名
-	//{"username":"","openid":"","realname":""}
+	//初始积分为0
 	@RequestMapping("/saveUser")
-	public String map(@RequestBody Map<String, Object> reqMap) {
+	public String saveUser(@RequestBody Map<String, Object> reqMap) {
 		String user_name = reqMap.get("username").toString();
 		String user_ID = reqMap.get("openid").toString();
-		String real_name = reqMap.get("realname").toString();
 		String user_image = reqMap.get("userimage").toString();
-		if(real_name==null) {
-			real_name = "神秘小朋友";
-		}
-		//初始积分为0
-		User user = new User(user_ID, user_name, real_name, 0, user_image);
+		User user = new User(user_ID, user_name, user_image);
 		System.out.println(user);
 		return userService.saveUser(user);
+	}
+	
+	//需要统计姓名
+	//{"realname":"","openid":""}
+	@RequestMapping("/fixUser")
+	public String fixUser(@RequestBody Map<String, Object> reqMap) {
+		String user_ID = reqMap.get("openid").toString();
+		String real_name = reqMap.get("realname").toString();
+		return userService.fixUser(user_ID, real_name);
 	}
 	
 	//根据openid查找用户
@@ -49,6 +52,7 @@ public class UserController {
 	}
 	
 	//登录加积分
+	//每次登录积分+1 / 每天登录+1？
 	@RequestMapping("/scoreIncrement")
 	public String scoreIncrement(@RequestBody Map<String, Object> reqMap) {
 		String openid = reqMap.get("openid").toString();

@@ -16,9 +16,15 @@ public class User implements Serializable{
 	private String real_name;
 	private Integer user_score;
 	private String user_image;
-	public User() {
+	public User(String user_ID, String user_name, String user_image) {
 		super();
+		this.user_ID = user_ID;
+		this.user_name = user_name;
+		this.user_image = user_image;
+		this.user_score = 0;
+		this.real_name = "神秘小朋友";
 	}
+	
 	public User(String user_ID, String user_name, String real_name, int user_score, String user_image) {
 		super();
 		this.user_ID = user_ID;

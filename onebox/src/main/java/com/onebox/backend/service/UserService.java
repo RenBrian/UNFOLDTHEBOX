@@ -6,6 +6,8 @@ public interface UserService {
 	
 	public String saveUser(User user);
 	
+	public String fixUser(String openid, String realname);
+	
 	public User findByOpenID(String openid);
 	
 	public Integer getUserScore(String openid);

@@ -12,6 +12,10 @@ public interface UserDao extends JpaRepository<User,String> {
 	public Integer getUserScore(String openid);
 	
 	@Modifying
+	@Query(value = "update user set real_name = ? where user_ID = ?", nativeQuery = true)
+	public Integer fixUser(String realname, String openid);
+	
+	@Modifying
 	@Query(value = "update user set user_score = ? where user_ID = ?", nativeQuery = true)
 	public Integer increUserScore(Integer score, String openid);
 

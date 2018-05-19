@@ -37,6 +37,18 @@ public class UserServiceImpl implements UserService{
 	
 	@Transactional
 	@Override
+	public String fixUser(String openid, String realname) {
+		try {
+			userDao.fixUser(realname, openid);
+			return "{\"result\":\"success\"}";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "{\"result\":\"error\"}";
+	}
+	
+	@Transactional
+	@Override
 	public String increUserScore(String openid) {
 		try {
 			int new_score = userDao.getUserScore(openid);
