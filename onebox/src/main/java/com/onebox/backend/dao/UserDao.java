@@ -8,15 +8,15 @@ import com.onebox.backend.entity.User;
 
 public interface UserDao extends JpaRepository<User,String> {
 	
-	@Query(value = "select user_score from user where user_ID = ?", nativeQuery = true)
+	@Query(value = "select user_score from one_user where user_ID = ?", nativeQuery = true)
 	public Integer getUserScore(String openid);
 	
 	@Modifying
-	@Query(value = "update user set real_name = ? where user_ID = ?", nativeQuery = true)
+	@Query(value = "update one_user set real_name = ? where user_ID = ?", nativeQuery = true)
 	public Integer fixUser(String realname, String openid);
 	
 	@Modifying
-	@Query(value = "update user set user_score = ? where user_ID = ?", nativeQuery = true)
+	@Query(value = "update one_user set user_score = ? where user_ID = ?", nativeQuery = true)
 	public Integer increUserScore(Integer score, String openid);
 
 }

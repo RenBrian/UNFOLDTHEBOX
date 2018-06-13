@@ -7,39 +7,32 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="o_uuser")
+@Table(name="one_uuser")
 public class UUser implements Serializable{
-	
-	  
-	/**  
-	 * @Fields field:field:{todo}
-	 */  
 	
 	private static final long serialVersionUID = -7066377556988053621L;
 	@Id
 	private String uuser_ID;
 	//hash加密一下
-	private String uuser_psw;
+	private String uuser_hash;
 	private String uuser_name;
 	private String uuser_email;
 	private String uuser_image;
 	
 	
-	public UUser(String uuser_psw, String uuser_name, String uuser_email, String uuser_image) {
+	public UUser(String uuser_hash, String uuser_name, String uuser_email) {
 		super();
-		this.uuser_psw = uuser_psw;
+		this.uuser_hash = uuser_hash;
 		this.uuser_name = uuser_name;
 		this.uuser_email = uuser_email;
-		this.uuser_image = uuser_image;
 	}
 
 
-	public UUser(String uuser_ID, String uuser_psw, String uuser_name, String uuser_email, String uuser_image) {
+	public UUser(String uuser_ID, String uuser_hash, String uuser_name, String uuser_image) {
 		super();
 		this.uuser_ID = uuser_ID;
-		this.uuser_psw = uuser_psw;
+		this.uuser_hash = uuser_hash;
 		this.uuser_name = uuser_name;
-		this.uuser_email = uuser_email;
 		this.uuser_image = uuser_image;
 	}
 
@@ -55,12 +48,12 @@ public class UUser implements Serializable{
 
 
 	public String getUuser_psw() {
-		return uuser_psw;
+		return uuser_hash;
 	}
 
 
 	public void setUuser_psw(String uuser_psw) {
-		this.uuser_psw = uuser_psw;
+		this.uuser_hash = uuser_psw;
 	}
 
 
@@ -96,7 +89,7 @@ public class UUser implements Serializable{
 
 	@Override
 	public String toString() {
-		return "UUser [uuser_ID=" + uuser_ID + ", uuser_psw=" + uuser_psw + ", uuser_name=" + uuser_name
+		return "UUser [uuser_ID=" + uuser_ID + ", uuser_psw=" + uuser_hash + ", uuser_name=" + uuser_name
 				+ ", uuser_email=" + uuser_email + ", uuser_image=" + uuser_image + "]";
 	}
 	
