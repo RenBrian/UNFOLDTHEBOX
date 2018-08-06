@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hostel World - 归处</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.min.css" rel="stylesheet">
+    <link href="css/user.css" rel="stylesheet">
+    <link href="css/toastr.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand" href="/hostel/index">主页</a>
+        <a class="btn btn-default" href="/hostel/findhotel">去发现</a>
+        <a class="btn btn-default" href="/hostel/usercenter">个人中心</a>
+        <a class="btn btn-default" href="/hostel/logout"><span id="login_or"></span></a>
+        <a><img class="round_icon" alt="worker" src="worker.png"><span id="username"></span></a>
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <input type="text" class="form-control form-control-lg" placeholder="搜索归处...">
+                </div>
+                <div class="col-12 col-md-3">
+                  <button id="search" type="button" class="btn btn-block btn-lg btn-primary">搜索</button>
+                </div>
+              </div>
+              <br/>
+              <div class="form-row pull-left">
+                <div class="col-12 col-md-12 mb-2 mb-md-0">
+                  <button name="button" class="btn btn-default" value="Hotel">酒店</button>
+                  <button name="button" class="btn btn-default" value="Homestay">民宿</button>
+                  <button name="button" class="btn btn-default" value="Inn">客栈</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <hr>
+        <div id="hotel_list" class="row" style="margin-left: 8px">
+      	<div class="card pull-left" style="width: 270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (1).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="/hostel/hotel" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		
+		<div class="card pull-left" style="width: 270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (2).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="#" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		
+		<div class="card pull-left" style="width: 270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (4).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="#" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		
+		
+		<div class="card pull-left" style="width: 270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (5).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="#" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		
+		
+		<div class="card pull-left" style="width: 270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (6).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="#" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		
+		
+		<div class="card pull-left" style="width: 270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (7).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="#" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		
+		<div class="card pull-left" style="width: 270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (8).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="#" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		
+		<div class="card pull-left" style="width: 270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (9).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="#" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		
+		
+		<div class="card pull-left" style="width: 270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (10).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="#" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		
+		
+		<div class="card pull-left" style="width: 270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (11).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="#" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		
+		<div class="card pull-left" style="width: 270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (12).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="#" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		
+		
+		<div class="card" style="width:270px;height: 400px">
+		  <img class="card-img-top" width="240px" height="180px" src="image/timg (3).jpg" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">天空之城客栈</h5>
+		    <p class="card-text">天空之城客栈，给你舒服的生活感觉，置身泸沽湖边，体会自然的奇妙。</p>
+		    <a href="#" class="btn btn-primary-flat">查看</a>
+		  </div>
+		</div>
+		</div>
+		<hr>
+        <ul class="pagination pull-right"></ul>
+      </div>
+    </section>
+    
+    
+    
+    <section class="bg-light text-center">
+      <div class="container">
+        
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="#">About</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Contact</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; Hostel World 2018. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/toastr.min.js"></script>
+    <script src="js/right_up_name.js"></script>
+    <script src="js/worker/findproject.js"></script>
+
+  </body>
+
+</html>

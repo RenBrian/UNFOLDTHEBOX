@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<!-- 登录界面 -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>OneBox - 登录</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../plugins/bootstrap/bootstrap.min.css" rel="stylesheet" >
+
+    <!-- Custom styles for this template -->
+    <link href="../css/signin.css" rel="stylesheet" >
+  </head>
+
+  <body>
+   <!-- class="text-center" -->
+    <form class="form-signin">
+      <img class="mb-4" src="../onebox.jpg" alt="onebox" width="200" height="200" style="display:block;margin:0 auto;">
+      <!-- <h1 class="h3 mb-3 font-weight-normal">一個盒子</h1> -->
+      <label for="inputEmail" class="sr-only">邮箱</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="邮箱账号" required autofocus>
+      <label for="inputPassword" class="sr-only">密码</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="用户密码" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> 记住我
+        </label>
+        <br>
+      	<button class="btn btn-outline-dark btn-block" id="signin_click">登录</button>
+      </div>
+      <a href="/onebox/uuser/signup" style="font-size:15px">注册</a>
+      <a href="/onebox/uuser/reset" style="font-size:15px;margin-left: 180px">忘记密码?</a>
+      <p class="mt-5 mb-3 text-muted text-center">&copy;2018 One Box - 一個盒子</p>
+    </form>
+  </body>
+</html>

@@ -23,16 +23,15 @@ public class UUserController {
 	//注册
 	@RequestMapping("/register")
 	public String register(Map<String, Object> map) {
-		String id = UUID.randomUUID().toString().replaceAll("-", "");
 		UUser uuser = new UUser(
+				UUID.randomUUID().toString().replaceAll("-", ""),
 				map.get("hash").toString(),
 				map.get("name").toString(),
 				map.get("email").toString());
-		uuser.setUuser_ID(id);
 		return uuserService.insert(uuser);
 	}
 	//UUser登陆
-	@RequestMapping("/uuser/login")
+	@RequestMapping("/login")
 	public String login(Map<String, Object> map, HttpSession session) {
 		String email = map.get("email").toString();
 		String hash = map.get("hash").toString();
@@ -40,6 +39,7 @@ public class UUserController {
 		
 		JSONObject json = JSONObject.fromObject(response);
 		if (json.get("result").toString().equals("success")) {
+//			session.setAttribute("uuser", arg1);
 			session.setAttribute("uuserid", json.get("id").toString());
 		}
 		return response;

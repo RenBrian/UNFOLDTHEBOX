@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 测试界面 - 新发布测试 -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>One Box - 一個盒子</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="../plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/landing-page.min.css" rel="stylesheet">
+    <link href="../css/user.css" rel="stylesheet">
+    <link href="../plugins/toastr/toastr.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="btn btn-default" href="/onebox/uuser/lib">题库</a>
+        <a class="btn btn-default" href="/onebox/uuser/test">测试</a>
+        <a class="btn btn-default" href="/onebox/uuser/result">成绩</a>
+        <a class="btn btn-default" href="/onebox/uuser/info"><span id="login_or">个人中心</span></a>
+        <a href="/onebox/uuser/about"><img class="round_icon" alt="worker" src="../onebox.jpg"><span id="username"></span></a>
+      </div>
+    </nav>
+    
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">用户信息</h3>
+              </div>
+              <hr>
+            <!-- /.box-header -->
+            <div class="box-body text-left">
+              <form id="info_form">
+                <div class="box-body">
+                  <div class="form-group text-left">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="userid">用户ID：</label>
+                        <label id="userid"></label>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="name">用户名：</label>
+                        <label id="name"></label>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="point">积分：</label>
+                        <label id="point">100</label>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="level">等级：</label>
+                        <label id="level">普通会员</label>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="email">邮箱：</label>
+                        <label id="email"></label>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="balance">账号余额：</label>
+                        <label id="balance"></label>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="id_number">身份证号：</label>
+                        <input type="text" class="form-control" id="id_number"/>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="tele">手机号码：</label>
+                        <input type="tel" class="form-control" id="tele"/>
+                        <br>
+                        <button id="confirm" type="button" class="btn btn-primary pull-right">完善</button>
+                      </div>
+                    </div>
+                    
+                    <br>
+                    
+		            <div class="tab-pane active" id="tab_time">
+		              	<table class="table table-bordered table-striped">
+		                <thead>
+		                <tr>
+		                  <th hidden="hidden">订单号</th>
+		                  <th style="width:25%">订单名称</th>
+		                  <th style="width:10%">价目</th>
+		                  <th style="width:10%">状态</th>
+		                  <th style="width:15%">日期</th>
+		                </tr>
+		                </thead>
+		                <tbody id="order_list">
+		                <tr>
+		                  <td hidden="hidden">00001</td>
+		                  <td><a>2018-07-11-12-09-04</a></td>
+		                  <td>天空之城客栈</td>
+		                  <td style="color: green;"><a href="">待付款</a></td>
+		                  <td>2018-07-11 ~ 2018-07-13</td>
+		                </tr>
+		                <tr>
+		                  <td hidden="hidden">00001</td>
+		                  <td><a>2018-06-21-12-09-04</a></td>
+		                  <td>蓝海酒店</td>
+		                  <td style="color: blue;">已完成</td>
+		                  <td>2018-06-24 ~ 2018-06-26</td>
+		                </tr>
+		                <tr>
+		                  <td hidden="hidden">00001</td>
+		                  <td><a>2018-06-11-12-09-04</a></td>
+		                  <td>徐霞客青年旅舍</td>
+		                  <td style="color: gray;">已取消</td>
+		                  <td>2018-06-13 ~ 2018-06-14</td>
+		                </tr>
+		                </tbody>
+		                <!-- <tfoot>
+		                </tfoot> -->
+		              </table>
+		            </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- ./box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+        
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <hr>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; 一個盒子 - One Box 2018. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <script src="../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.min.js"></script>
+    <script src="../plugins/toastr/toastr.min.js"></script>
+    <!-- <script src="js/right_up_name.js"></script>
+    <script src="js/worker/workerinfo.js"></script> -->
+
+  </body>
+
+</html>

@@ -5,14 +5,15 @@
 <title>uploading</title>
 </head>
 <body>
-	<form id="upload_form" enctype="multipart/form-data" method="post">
-		图片<input id="file" type="file" name="file" /> 
+	<form id="upload_form" enctype="multipart/form-data" method="post" >
+		图片<input id="file" type="file" name="file" accept=".zip"/> 
 		<!-- <input type="submit" value="上传" /> -->
 		<button id="upload" type="button"> 上传</button>
 	</form>
 	<br />
-	<img id="image_here" alt="here" style="width:200px" src="http://192.168.79.1:8080/onebox/269ee4d2b5e6408d8f2c7aea22a8a5a9.png" />
-	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+	<img id="image_here" alt="here" style="width:200px" src="http://127.0.0.1:8080/xtags/2018-06-22/2ca87e9d1a554e55b4482423fa55ae4a/000000000229.jpg" />
+	<!-- <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script> -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript">
 	$().ready(function() {
 	    $("#upload").click(function(){
@@ -25,7 +26,7 @@
 	    	var formdata = new FormData();
 	    	formdata.append("file",file[0]); */
 	    	$.ajax({
-	            url: '/onebox/common/upload',
+	            url: '/xtags/fileupload',
 	            type: 'POST',
 	            data: formdata,                    // 上传formdata封装的数据
 	            dataType: 'JSON',
@@ -34,7 +35,7 @@
 	            contentType: false,                // 告诉jQuery不要去设置Content-Type请求头
 	            success:function (msg) {           //成功回调
 	                console.log(msg);
-	                $("#upload").attr("disabled","disabled");
+	                //$("#upload").attr("disabled","disabled");
 	            	var flag = msg.result;
 	            	if(flag=="success"){
 	            		console.log("上传成功！");

@@ -16,7 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.onebox.backend.tools.FileUtil;
 import com.onebox.backend.tools.IPUtil;
 /**
- * @ClassName: CommonController  
+ * @ClassName: FileController  
  * @Description: 实现文件上传 - 返回的url中IP可能出错
  * @return {"result":"","filepath":""} 
  * @author Brian  
@@ -24,7 +24,7 @@ import com.onebox.backend.tools.IPUtil;
  */
 @Controller
 @RequestMapping("/common")
-public class CommonController {
+public class FileController {
 	
 	@Value("${web.image}")
 	private String imagePath;

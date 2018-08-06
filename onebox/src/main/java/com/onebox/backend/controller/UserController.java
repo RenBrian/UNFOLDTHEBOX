@@ -26,6 +26,7 @@ public class UserController {
 		String user_name = reqMap.get("username").toString();
 		String user_ID = reqMap.get("openid").toString();
 		String user_image = reqMap.get("userimage").toString();
+		
 		User user = new User(user_ID, user_name, user_image);
 		System.out.println(user);
 		return userService.saveUser(user);

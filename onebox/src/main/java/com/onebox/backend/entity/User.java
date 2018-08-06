@@ -10,12 +10,14 @@ import javax.persistence.Table;
 @Table(name="one_user")
 public class User implements Serializable{
 	private static final long serialVersionUID = -4256711800099785778L;
+	
 	@Id
 	private String user_ID;
 	private String user_name;
 	private String real_name;
-	private Integer user_score;
+	private int user_score;
 	private String user_image;
+	
 	public User(String user_ID, String user_name, String user_image) {
 		super();
 		this.user_ID = user_ID;
@@ -51,7 +53,7 @@ public class User implements Serializable{
 	public void setReal_name(String real_name) {
 		this.real_name = real_name;
 	}
-	public Integer getUser_score() {
+	public int getUser_score() {
 		return user_score;
 	}
 	public void setUser_score(Integer user_score) {

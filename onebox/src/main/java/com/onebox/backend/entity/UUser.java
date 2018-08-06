@@ -20,11 +20,8 @@ public class UUser implements Serializable{
 	private String uuser_image;
 	
 	
-	public UUser(String uuser_hash, String uuser_name, String uuser_email) {
+	public UUser() {
 		super();
-		this.uuser_hash = uuser_hash;
-		this.uuser_name = uuser_name;
-		this.uuser_email = uuser_email;
 	}
 
 
