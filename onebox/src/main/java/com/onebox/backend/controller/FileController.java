@@ -26,14 +26,8 @@ import com.onebox.backend.tools.IPUtil;
 @RequestMapping("/common")
 public class FileController {
 	
-	@Value("${web.image}")
-	private String imagePath;
-	
-	@Value("${web.excel}")
-	private String excelPath;
-	
 	@Value("${web.file}")
-	private String otherfilePath;
+	private String webFilePath;
 	
 	@Value("${server.port}")
 	private String port;
@@ -54,14 +48,8 @@ public class FileController {
 		fileName = filename +"."+ suffix;
 		System.out.println("filename->>>" + fileName + "\nContentType->>>" + contentType);
 		//获取存储路径
-		String filepath = "";
-		if (suffix.equals("jpg") | suffix.equals("jpeg") | suffix.equals("png") | suffix.equals("gif") | suffix.equals("ico")) {
-			filepath = imagePath + "/";
-		}else if(suffix.equals("xls") | suffix.equals("xlsx")) {
-			filepath = excelPath + "/";
-		}else {
-			filepath = otherfilePath + "/";
-		}
+		String filepath = webFilePath + "/";
+		
 		System.out.println("filepath->>>>" + filepath);
 		String fileurl = "http://" + IPUtil.getLocalIP() + ":" + port + context + "/" + fileName;
 		System.out.println(fileurl);

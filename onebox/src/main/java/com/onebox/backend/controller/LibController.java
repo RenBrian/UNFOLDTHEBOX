@@ -2,10 +2,15 @@ package com.onebox.backend.controller;
 
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 @RequestMapping("/lib")
@@ -52,5 +57,21 @@ public class LibController {
 		return e_ids;
 	}
 	
+	//上传下载题库
+	@RequestMapping("/load")
+	public String loadLib() {
+		return "/lib/load";
+	}
+	
+	//实现文件上传功能，调用tools解析，成功后返回路径
+	@RequestMapping("/upload")
+	public @ResponseBody String uploadLib(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest req, HttpServletResponse res) {
+		return "";
+	}
+	//实现题库的导出
+	@RequestMapping("/download")
+	public @ResponseBody String downloadLib() {
+		return "";
+	}
 
 }
